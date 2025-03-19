@@ -1,0 +1,125 @@
+/* 全局样式 */
+body {
+  background: url('/table/img/html_table.jpg') center/cover ;
+  min-height: 100vh;
+
+}
+
+
+/* 标题 */
+.table-header {
+  width: fit-content;
+  margin: 50px auto 0;
+  font-size: large;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 4px 4px 10px rgb(0,0,0,0.7);
+}
+
+/*包裹表格*/
+.table-wrapper{
+  height: 400px;
+  max-width: fit-content;
+  overflow: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding-right: 1px;/*让表格和滑动条不直接黏在一起*/
+}
+
+/* 表格样式 */
+.customer-table {
+  width: 100%;
+  background-color: #fff5;
+  font-size: 16px;
+  margin: 0 auto;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.3);
+  border-collapse: collapse;
+}
+
+.customer-table thead tr {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(228,224,241,1);
+  pointer-events: none;/*避免鼠标指向标题的时候映射出被挡住的元素*/
+}
+
+/* 文本样式 */
+.customer-table th, 
+.customer-table td {
+  padding: 10px 30px;
+  text-align: center;
+}
+.customer-table th{
+  font-size: 18px;
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+}
+td{
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+td.steps {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Homenaje", sans-serif;
+}
+td.rank{
+  font-family: "Noto Serif", serif;
+  font-weight: bold;
+  font-synthesis: none;
+}
+/* 头像 */
+.customer-avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* 行背景 */
+.back-light {
+  background-color: rgba(228,224,241,0.5);
+}
+.back-black {
+  background-color: rgba(228,224,241,0.7);
+}
+
+/* 悬停效果 */
+.customer-table tr {
+  transition: background 0.15s;
+}
+.customer-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* 自定义滚动条样式 */
+.table-wrapper::-webkit-scrollbar {
+  width: 8px; /* 滚动条宽度 */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); /* 轨道颜色，透明感 */
+  border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.6); /* 滑块颜色 */
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 200, 200, 1); /* 鼠标悬停时的滑块颜色 */
+}
