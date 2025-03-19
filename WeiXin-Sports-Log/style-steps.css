@@ -1,6 +1,6 @@
 /* 全局样式 */
 body {
-  background: url('/table/img/html_table.jpg') center/cover ;
+  background: url('img-steps/background.jpg') center/cover ;
   min-height: 100vh;
 
 }
