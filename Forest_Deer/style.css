@@ -1,0 +1,201 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  background: url('src/background.jpg') center/cover no-repeat;
+  height: 110vh;
+}
+#a-nav{
+  color: white;
+  transition: all 0.2s;
+
+}
+#button-nav{
+  background-color: transparent;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px 12px ;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.2s;
+  
+}
+#button-nav:hover{
+  background-color: white;
+}
+#button-nav:hover #a-nav{
+  color: black;
+}
+
+.nav-a{
+  color: white;
+  position: relative;
+}
+
+.nav-a::after{
+  content: '';
+  height: 1.3px;
+  background-color: white;
+  position: absolute;
+  left: -18%;
+  bottom: 0;
+  width: 130%;
+  transform: scaleX(0) translateX(-18%) ;
+  transform-origin: right;
+  transition: transform 0.25s;/*动画效果写在这里才有用，写在a标签里面没用*/
+
+}
+.nav-a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+div.register a{
+  color: white;
+  text-decoration: underline;
+  transition: text-shadow 0.15s ease-in-out;
+}
+div.register a:hover{
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+li{
+  display: inline-block;
+}
+nav{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-right{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.nav-right a{
+  margin: 0 20px;
+}
+
+
+div.register{
+  position: relative;
+  top: 40px;
+  width: 400px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.5);
+}
+div.register h1{
+  margin: 25px auto;
+}
+
+div.input{
+  margin: 6px auto;
+  position: relative;
+}
+div.input i{
+  position: absolute;
+  font-size: 16px;
+  top: 11px;
+  left: 210px;
+}
+hr{
+  border: none;
+  height: 1.5px;
+  width: 100%;/*确保它是线，如果设置成1px，其实就只是一个点*/
+  background-color: black;/*设置分割线的颜色，不是color，而是background-color！*/
+}
+input{
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: 220px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+
+}
+input::placeholder{
+  color: black;
+  letter-spacing: 1.1px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+}
+input:focus{
+  outline: none;
+
+}
+
+.register-protocol{
+  margin-top: 16px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.register-protocol p{
+  margin-left: 6px;
+}
+.register-protocol input[type=checkbox]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: none;
+  width: 14px;
+  height: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.register-protocol input[type=checkbox]:hover{
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+.register-protocol input[type=checkbox]:checked{
+  background-color: rgb( 20, 37, 52);
+  color: white;
+}
+.register-protocol input[type=checkbox]:checked::after{
+  content: '✔';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-5.2px,-10px);
+}
+#button-register{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 230px;
+  padding: 8px 10px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb( 20, 37, 52);
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+#button-register:hover{
+  opacity: 0.85;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+#button-register:active{
+  box-shadow: none;
+}
+
+.register-protocol p,p.login{
+  font-family: "Funnel Sans", sans-serif;
+}
